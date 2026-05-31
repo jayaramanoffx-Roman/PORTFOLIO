@@ -204,7 +204,7 @@ section {
 .hero-details {
   min-height: auto;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 120px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
