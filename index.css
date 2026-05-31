@@ -709,7 +709,7 @@
   .hero-details{
   min-height:auto;
   padding-top:10px;
-  padding-bottom:120px;
+  padding-bottom:10px;
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:50px;
