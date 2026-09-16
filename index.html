@@ -5,7 +5,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jaya Raman N P | Portfolio</title>
-  <link rel="stylesheet" href="index.css" />
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Jaya Raman N P | Python Full Stack Developer" />
+  <meta name="description" content="Python Full Stack Developer building high-performance web applications using Django, React.js, and MySQL. Open for freelance projects and developer opportunities." />
+  <meta name="author" content="Jaya Raman N P" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Open Graph / WhatsApp / LinkedIn / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Jaya Raman N P | Python Full Stack Developer" />
+  <meta property="og:description" content="Python Full Stack Developer building clean, high-performance web applications using Django, React.js, and MySQL." />
+  <meta property="og:site_name" content="Jaya Raman Portfolio" />
+
+  <!-- Twitter Meta -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jaya Raman N P | Python Full Stack Developer" />
+  <meta name="twitter:description" content="Python Full Stack Developer building clean, high-performance web applications using Django, React.js, and MySQL." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="index.css?v=14" />
 </head>
 
 <body>
@@ -20,15 +44,24 @@
       <a href="#experience">Experience</a>
       <a href="#courses">Courses</a>
       <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
       <a href="#skills">Skills</a>
       <a href="#certificates">Certificates</a>
       <a href="#resume">Resume</a>
       <a href="#contact">Contact</a>
     </div>
 
-    <div class="status">
-      <span class="dot"></span>
-      Available
+    <div class="nav-right">
+      <div class="status">
+        <span class="dot"></span>
+        Available
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
 
@@ -36,11 +69,11 @@
   <section id="home" class="hero">
     <p class="eyebrow reveal">Python Full Stack Developer</p>
 
-    <div class="hero-name reveal">
+    <h1 class="hero-name reveal">
       <div class="hero-line small">N P</div>
       <div class="hero-line">JAYA</div>
       <div class="hero-line">RAMAN</div>
-    </div>
+    </h1>
   </section>
 
   <!-- ================= HOME DETAILS AFTER SCROLL ================= -->
@@ -136,14 +169,177 @@
     <p class="eyebrow reveal">Featured Work</p>
     <h2 class="section-title reveal">Selected<br>projects.</h2>
 
-    <div class="projects-grid">
+    <!-- Category 1: Commercial & Client Sites -->
+    <div class="project-category-header reveal">
+      <div class="category-badge">💼 Commercial & Client Platforms</div>
+      <p>Production web applications and live client platforms built for agencies, sports leagues, and founders.</p>
+    </div>
 
+    <div class="projects-grid two-col">
+
+      <!-- Pickabuuu -->
       <div class="card project reveal">
         <div>
-          <h3>SHOPZ - E - Commerce Website</h3>
+          <div class="project-type-tag">Live Product · Client Platform</div>
+          <h3>Pickabuuu</h3>
           <p>
-            Full-stack e-commerce web app for selling tech gadgets like earbuds,
-            power banks, headphones, watches and pendrives.
+            Social wishlist and gift registry web application. Allows users to curate wishlists from any store, share with friends & family, and manage gift reservations seamlessly with interactive dashboards.
+          </p>
+        </div>
+
+        <div>
+          <div class="tag-row">
+            <span class="tag">React.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Tailwind CSS</span>
+            <span class="tag">REST API</span>
+          </div>
+
+          <div class="btn-row">
+            <a href="https://pickabuuu.com/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn">
+              View Live Site ↗
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TNPPL Season 2 -->
+      <div class="card project reveal">
+        <div>
+          <div class="project-type-tag">Sports League · Official Portal</div>
+          <h3>TNPPL Season 2</h3>
+          <p>
+            Official tournament website for Tamil Nadu Pickleball Premier League. Features 12 district franchises, 168 pro players, live fixtures, venue schedules at Express Avenue Mall, and a ₹30 Lakh prize pool showcase.
+          </p>
+        </div>
+
+        <div>
+          <div class="tag-row">
+            <span class="tag">React.js</span>
+            <span class="tag">Tailwind CSS</span>
+            <span class="tag">Vite</span>
+            <span class="tag">Responsive UI</span>
+          </div>
+
+          <div class="btn-row">
+            <a href="https://tnppl.com/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn">
+              View Live Site ↗
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Eyelevel Growth Studio -->
+      <div class="card project reveal">
+        <div>
+          <div class="project-type-tag">Agency Site · Production</div>
+          <h3>Eyelevel Growth Studio</h3>
+          <p>
+            Official website for a premier digital growth marketing agency in Chennai. Built with high-conversion typography, interactive marketing service funnels, Web3Forms integration, and fluid micro-animations.
+          </p>
+        </div>
+
+        <div>
+          <div class="tag-row">
+            <span class="tag">React</span>
+            <span class="tag">Tailwind CSS</span>
+            <span class="tag">Web3Forms</span>
+            <span class="tag">SEO / Performance</span>
+          </div>
+
+          <div class="btn-row">
+            <a href="https://theeyelevelstudio.com/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn">
+              View Live Site ↗
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Akmal Rahman -->
+      <div class="card project reveal">
+        <div>
+          <div class="project-type-tag">Executive Portfolio · Personal Brand</div>
+          <h3>Akmal Rahman</h3>
+          <p>
+            Executive portfolio website for Akmal Rahman, Marketing Practitioner and Co-Founder of EyeLevel Growth Studio. Features clean minimalist styling, fast loading performance, and high-clarity typography.
+          </p>
+        </div>
+
+        <div>
+          <div class="tag-row">
+            <span class="tag">React</span>
+            <span class="tag">Tailwind CSS</span>
+            <span class="tag">Minimalist UI</span>
+            <span class="tag">Fast Loading</span>
+          </div>
+
+          <div class="btn-row">
+            <a href="https://www.akmalrahman.com/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn">
+              View Live Site ↗
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- VELoura -->
+      <div class="card project reveal">
+        <div>
+          <div class="project-type-tag">D2C Brand · E-Commerce Store</div>
+          <h3>VELoura - Streetwear</h3>
+          <p>
+            Modern customized streetwear and lifestyle e-commerce brand. Features 16 signature drops, 220 GSM luxury combed cotton showcase, interactive cart system, and mobile-first shopping UI.
+          </p>
+        </div>
+
+        <div>
+          <div class="tag-row">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">D2C E-Commerce</span>
+            <span class="tag">Vercel</span>
+          </div>
+
+          <div class="btn-row">
+            <a href="https://ve-loura.vercel.app/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn">
+              View Live Site ↗
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Category 2: Full Stack & Personal Projects -->
+    <div class="project-category-header reveal" style="margin-top: 80px;">
+      <div class="category-badge">🛠️ Full Stack & Personal Work</div>
+      <p>Self-directed full-stack applications exploring modern architecture, backend REST APIs, and database engineering.</p>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- SHOPZ -->
+      <div class="card project reveal">
+        <div>
+          <div class="project-type-tag">Full-Stack Application</div>
+          <h3>SHOPZ - E-Commerce</h3>
+          <p>
+            Full-stack e-commerce web app for selling tech gadgets like earbuds, power banks, headphones, watches and pendrives with cart management and backend REST endpoints.
           </p>
         </div>
 
@@ -161,51 +357,92 @@
                target="_blank"
                rel="noopener noreferrer"
                class="btn">
-              View Live
+              View Live ↗
+            </a>
+            <a href="https://github.com/jayaramanoffx-Roman"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn btn-secondary">
+              GitHub
             </a>
           </div>
         </div>
       </div>
 
+      <!-- FlowBoard -->
       <div class="card project reveal">
         <div>
-          <h3>Portfolio Website</h3>
+          <div class="project-type-tag">React Web App · Workflow Tool</div>
+          <h3>FlowBoard</h3>
           <p>
-            Responsive personal portfolio website built to showcase skills,
-            projects and profile information.
+            Collaborative task and project workflow management web application. Features interactive visual boards, task lifecycle tracking, intuitive column organization, and responsive agile workflow UI.
           </p>
         </div>
 
         <div>
           <div class="tag-row">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
+            <span class="tag">React.js</span>
+            <span class="tag">Tailwind CSS</span>
+            <span class="tag">REST API</span>
+            <span class="tag">Vercel</span>
+            <span class="tag">State Management</span>
           </div>
 
           <div class="btn-row">
-            <a href="javascript:void(0)"
-               class="btn" style="cursor: default;" title="You are currently viewing this site">
-              Current Site
+            <a href="https://flowboard-frontend-rho.vercel.app/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn">
+              View Live ↗
             </a>
           </div>
         </div>
       </div>
 
+      <!-- Portfolio Website -->
       <div class="card project reveal">
         <div>
-          <h3>Guess The Number Game</h3>
+          <div class="project-type-tag">Portfolio & Showcase</div>
+          <h3>Portfolio Website</h3>
           <p>
-            Interactive browser game with random number generation,
-            score tracking and user input validation.
+            Responsive personal portfolio website built with dark minimalist aesthetics, custom glassmorphism, responsive navigation drawer, and SEO optimization.
           </p>
         </div>
 
         <div>
           <div class="tag-row">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
             <span class="tag">JavaScript</span>
+            <span class="tag">Responsive</span>
+          </div>
+
+          <div class="btn-row">
+            <a href="https://github.com/jayaramanoffx-Roman/PORTFOLIO"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn">
+              View Source Code ↗
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guess The Number Game -->
+      <div class="card project reveal">
+        <div>
+          <div class="project-type-tag">Interactive Browser Game</div>
+          <h3>Guess The Number</h3>
+          <p>
+            Interactive browser game featuring random number generation algorithms, score tracking, real-time feedback hints, and user input validation.
+          </p>
+        </div>
+
+        <div>
+          <div class="tag-row">
+            <span class="tag">JavaScript</span>
+            <span class="tag">DOM API</span>
+            <span class="tag">CSS3</span>
           </div>
 
           <div class="btn-row">
@@ -213,13 +450,162 @@
                target="_blank"
                rel="noopener noreferrer"
                class="btn">
-              View Live
+              View Live ↗
             </a>
           </div>
         </div>
       </div>
 
     </div>
+  </section>
+
+  <!-- ================= SERVICES & FREELANCE ================= -->
+  <section id="services" class="services">
+    <p class="eyebrow reveal">Services & Freelance</p>
+    <h2 class="section-title reveal">High-performance websites.<br>Built fast, priced fairly.</h2>
+    <p class="services-intro reveal">
+      Helping small businesses, creators & startups establish a modern, high-converting online presence without expensive agency overheads.
+    </p>
+
+    <!-- Services Grid -->
+    <div class="services-grid">
+
+      <!-- Service 1: Fast Business Sites & Landing Pages -->
+      <div class="card service-card reveal">
+        <div class="service-card-top">
+          <div class="service-badge">3–5 Days Turnaround</div>
+          <h3>Fast Business Sites & Landing Pages</h3>
+          <p class="service-desc">
+            Modern, high-converting websites tailored for businesses, clinics, consultants, and creators. Engineered for fast load speeds, sleek aesthetics, and strong credibility.
+          </p>
+        </div>
+
+        <div class="service-card-bottom">
+          <ul class="service-features">
+            <li><span class="check">✓</span> Modern Minimalist UI & Inter Typography</li>
+            <li><span class="check">✓</span> 100% Mobile, Tablet & Desktop Responsive</li>
+            <li><span class="check">✓</span> Local SEO & OpenGraph Social Sharing</li>
+            <li><span class="check">✓</span> Lead Capture & Contact Form Integration</li>
+            <li><span class="check">✓</span> Free Domain & Hosting Setup Guidance</li>
+          </ul>
+
+          <div class="service-target">
+            <span class="target-label">Ideal for:</span> Local Businesses, Doctors, Consultants, Creators
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 2: E-Commerce & D2C Brand Stores -->
+      <div class="card service-card reveal">
+        <div class="service-card-top">
+          <div class="service-badge">High Conversion</div>
+          <h3>E-Commerce & D2C Brand Stores</h3>
+          <p class="service-desc">
+            Clean, mobile-first digital storefronts designed to showcase products and convert visitors into paying customers smoothly with zero friction (similar to VELoura).
+          </p>
+        </div>
+
+        <div class="service-card-bottom">
+          <ul class="service-features">
+            <li><span class="check">✓</span> Product Showcase & Dynamic Filtering</li>
+            <li><span class="check">✓</span> Direct WhatsApp Order / Cart Flow</li>
+            <li><span class="check">✓</span> Ultra-Fast Mobile Shopping Experience</li>
+            <li><span class="check">✓</span> High-Resolution Media & Clean Layouts</li>
+            <li><span class="check">✓</span> Simple Product & Pricing Update Support</li>
+          </ul>
+
+          <div class="service-target">
+            <span class="target-label">Ideal for:</span> Clothing Brands, Retail Shops, Custom Merch
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 3: Custom Web Apps & Dashboards -->
+      <div class="card service-card reveal">
+        <div class="service-card-top">
+          <div class="service-badge">Scalable Architecture</div>
+          <h3>Custom Web Apps & Dashboards</h3>
+          <p class="service-desc">
+            Tailored full-stack platforms powered by React and robust Django REST APIs. Engineered with clean database architecture, security, and intuitive management panels.
+          </p>
+        </div>
+
+        <div class="service-card-bottom">
+          <ul class="service-features">
+            <li><span class="check">✓</span> React.js + Django REST API Architecture</li>
+            <li><span class="check">✓</span> Structured MySQL Database Modeling</li>
+            <li><span class="check">✓</span> Secure User Authentication & Permissions</li>
+            <li><span class="check">✓</span> Custom Analytics & Management Dashboards</li>
+            <li><span class="check">✓</span> Cloud Deployment (Vercel, Render, VPS)</li>
+          </ul>
+
+          <div class="service-target">
+            <span class="target-label">Ideal for:</span> Startups, SaaS MVPs, Internal Business Tools
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Trust Strip / Value Proposition -->
+    <div class="trust-strip reveal">
+      <div class="trust-item">
+        <span class="trust-icon">⚡</span>
+        <div>
+          <h4>3–5 Days Delivery</h4>
+          <p>Rapid turnaround without compromising on design or performance.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">💰</span>
+        <div>
+          <h4>Fair & Transparent Pricing</h4>
+          <p>Zero agency bloat or hidden fees. Budget-friendly for growing teams.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">📱</span>
+        <div>
+          <h4>Mobile-First & Ultra Fast</h4>
+          <p>Pixel-perfect responsiveness and fast load times on every device.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">🤝</span>
+        <div>
+          <h4>Direct 1-on-1 Support</h4>
+          <p>You work directly with me from initial concept to launch.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Instant Action CTA Box -->
+    <div class="card services-cta reveal">
+      <div class="services-cta-content">
+        <div class="service-badge">Direct Collaboration</div>
+        <h3>Have a project in mind? Let's discuss your budget & timeline.</h3>
+        <p>
+          Whether you need a brand-new website, an e-commerce store, or want to revamp an existing site, feel free to reach out. No obligation, 100% transparent advice.
+        </p>
+      </div>
+
+      <div class="btn-row">
+        <a href="https://wa.me/918608042527?text=Hi%20Jaya%20Raman,%20I'm%20interested%20in%20building%20a%20website%20for%20my%20business."
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn btn-whatsapp">
+          <svg class="whatsapp-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#25D366" d="M12.004 1.168C6.02 1.168 1.168 6.02 1.168 12.004c0 1.91.499 3.774 1.448 5.419L1 23l5.748-1.507a10.8 10.8 0 0 0 5.256 1.348h.005c5.98 0 10.836-4.852 10.836-10.837 0-2.898-1.13-5.621-3.18-7.671a10.77 10.77 0 0 0-7.661-3.165z"/>
+            <path fill="#ffffff" d="M17.472 14.382c-.301-.15-1.777-.876-2.053-.976-.275-.1-.476-.15-.676.15-.2.3-.776.976-.951 1.176-.176.2-.351.225-.652.075-.3-.15-1.267-.467-2.414-1.489-.893-.797-1.496-1.782-1.672-2.083-.175-.3-.019-.462.132-.611.136-.134.301-.35.452-.525.15-.175.2-.3.301-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.628-.927-2.228-.244-.585-.493-.505-.677-.514-.175-.008-.376-.01-.577-.01-.2 0-.526.075-.802.375-.276.3-1.053 1.028-1.053 2.507 0 1.479 1.078 2.906 1.229 3.107.15.2 2.122 3.24 5.14 4.544.718.31 1.279.495 1.716.634.721.23 1.378.197 1.897.12.578-.087 1.777-.726 2.028-1.427.251-.701.251-1.302.176-1.427-.075-.126-.276-.201-.576-.351z"/>
+          </svg>
+          <span>Chat on WhatsApp ↗</span>
+        </a>
+        <a href="#contact" class="btn">
+          Get a Free Quote
+        </a>
+      </div>
+    </div>
+
   </section>
 
   <!-- ================= SKILLS ================= -->
@@ -320,7 +706,7 @@
   <!-- ================= CONTACT ================= -->
   <section id="contact" class="contact">
     <p class="eyebrow reveal">Contact</p>
-    <h1 class="reveal">Let’s build<br>something.</h1>
+    <h2 class="reveal">Let’s build<br>something.</h2>
 
     <p class="reveal">
       I am open to internships, freelance projects and full stack developer opportunities.
@@ -341,6 +727,33 @@
   </footer>
 
   <script>
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("open");
+        navLinks.classList.toggle("open");
+      });
+
+      // Close mobile menu automatically when clicking any link
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menuToggle.classList.remove("open");
+          navLinks.classList.remove("open");
+        });
+      });
+
+      // Close mobile menu if clicked outside
+      document.addEventListener("click", (e) => {
+        if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+          menuToggle.classList.remove("open");
+          navLinks.classList.remove("open");
+        }
+      });
+    }
+
     // Scroll animation
     const revealElements = document.querySelectorAll(".reveal");
 
