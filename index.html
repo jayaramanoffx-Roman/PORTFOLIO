@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="index.css?v=18" />
+  <link rel="stylesheet" href="index.css?v=19" />
 </head>
 
 <body>
@@ -732,16 +732,30 @@
         </div>
       </div>
 
-      <div class="form-group">
-        <label for="service">What are you looking for?</label>
-        <select id="service" name="service" required>
-          <option value="" disabled selected>Select an option</option>
-          <option value="Fast Business Site / Landing Page">Fast Business Site / Landing Page</option>
-          <option value="E-Commerce Brand Store">E-Commerce / D2C Brand Store</option>
-          <option value="Full Stack Web App (Django + React)">Custom Full Stack Web App (Django + React)</option>
-          <option value="Job / Internship Opportunity">Job or Internship Opportunity</option>
-          <option value="General Discussion / Other">General Discussion / Other</option>
-        </select>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="company">Company / Brand Name <span class="label-optional">(Optional)</span></label>
+          <input type="text" id="company" name="company" placeholder="e.g. Acme Corp, TNPPL, Studio..." />
+        </div>
+        <div class="form-group">
+          <label for="serviceInput">What are you looking for?</label>
+          <div class="custom-select-wrapper" id="customSelectWrapper">
+            <input type="hidden" name="service" id="serviceInput" required />
+            <button type="button" class="custom-select-trigger" id="customSelectTrigger" aria-haspopup="listbox" aria-expanded="false">
+              <span id="customSelectLabel">Select an option</span>
+              <svg class="select-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="custom-select-menu" id="customSelectMenu" role="listbox">
+              <div class="custom-option" data-value="Fast Business Site / Landing Page" role="option">Fast Business Site / Landing Page</div>
+              <div class="custom-option" data-value="E-Commerce / D2C Brand Store" role="option">E-Commerce / D2C Brand Store</div>
+              <div class="custom-option" data-value="Custom Full Stack Web App (Django + React)" role="option">Custom Full Stack Web App (Django + React)</div>
+              <div class="custom-option" data-value="Job or Internship Opportunity" role="option">Job or Internship Opportunity</div>
+              <div class="custom-option" data-value="General Discussion / Other" role="option">General Discussion / Other</div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="form-group">
@@ -819,6 +833,41 @@
 
     revealElements.forEach((el) => observer.observe(el));
 
+    // Custom Select Dropdown
+    const selectWrapper = document.getElementById("customSelectWrapper");
+    const selectTrigger = document.getElementById("customSelectTrigger");
+    const selectLabel = document.getElementById("customSelectLabel");
+    const selectMenu = document.getElementById("customSelectMenu");
+    const serviceInput = document.getElementById("serviceInput");
+
+    if (selectWrapper && selectTrigger && selectMenu && serviceInput) {
+      selectTrigger.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const isOpen = selectWrapper.classList.toggle("open");
+        selectTrigger.setAttribute("aria-expanded", isOpen);
+      });
+
+      selectMenu.querySelectorAll(".custom-option").forEach((option) => {
+        option.addEventListener("click", () => {
+          const val = option.getAttribute("data-value");
+          serviceInput.value = val;
+          selectLabel.textContent = val;
+          selectLabel.classList.add("selected");
+          selectMenu.querySelectorAll(".custom-option").forEach((opt) => opt.classList.remove("active"));
+          option.classList.add("active");
+          selectWrapper.classList.remove("open");
+          selectTrigger.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!selectWrapper.contains(e.target)) {
+          selectWrapper.classList.remove("open");
+          selectTrigger.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
+
     // Contact Form AJAX Handler (Web3Forms)
     const contactForm = document.getElementById("contactForm");
     const submitBtn = document.getElementById("submitBtn");
@@ -827,6 +876,14 @@
     if (contactForm && submitBtn && formStatus) {
       contactForm.addEventListener("submit", async (e) => {
         e.preventDefault();
+
+        if (!serviceInput || !serviceInput.value) {
+          formStatus.textContent = "Please select what you are looking for.";
+          formStatus.className = "form-status error";
+          if (selectWrapper) selectWrapper.classList.add("open");
+          return;
+        }
+
         const submitSpan = submitBtn.querySelector("span");
         const originalText = submitSpan ? submitSpan.textContent : submitBtn.textContent;
 
@@ -849,6 +906,14 @@
             formStatus.textContent = "✓ Thank you! Your message has been sent successfully. I'll get back to you shortly.";
             formStatus.className = "form-status success";
             contactForm.reset();
+            if (selectLabel) {
+              selectLabel.textContent = "Select an option";
+              selectLabel.classList.remove("selected");
+            }
+            if (serviceInput) serviceInput.value = "";
+            if (selectMenu) {
+              selectMenu.querySelectorAll(".custom-option").forEach((opt) => opt.classList.remove("active"));
+            }
           } else {
             formStatus.textContent = data.message || "Please enter your Web3Forms access key or email directly to jayaraman.offx@gmail.com";
             formStatus.className = "form-status error";
